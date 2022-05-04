@@ -25,28 +25,28 @@ console.log(validAnagram('amanaplanacanalpanama', 'acanalmanplanpamana'));
 console.log(validAnagram('awertv', 'aevwrt'));
 console.log('############################');
 // 나의 O(n) 방식 풀이
-function myValidAnagram(strA, strB) {
-  if (strA.length !== strB.length) return false;
-  let charCountA = {};
-  let charCountB = {};
-  for (let char of strA) {
-    charCountA[char] = (charCountA[char] || 0) + 1;
-  }
-  for (let char of strB) {
-    charCountB[char] = (charCountB[char] || 0) + 1;
-  }
-  for (let key in charCountA) {
-    if (charCountA[key] !== charCountB[key]) {
-      return false;
-    }
-  }
-  return true;
-}
+// function myValidAnagram(strA, strB) {
+//   if (strA.length !== strB.length) return false;
+//   let charCountA = {};
+//   let charCountB = {};
+//   for (let char of strA) {
+//     charCountA[char] = (charCountA[char] || 0) + 1;
+//   }
+//   for (let char of strB) {
+//     charCountB[char] = (charCountB[char] || 0) + 1;
+//   }
+//   for (let key in charCountA) {
+//     if (charCountA[key] !== charCountB[key]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
-console.log(myValidAnagram('', ''));
-console.log(myValidAnagram('aaz', 'zza'));
-console.log(myValidAnagram('anagraam', 'nagaramm'));
-console.log(myValidAnagram('rat', 'car'));
-console.log(myValidAnagram('awesome', 'awesom'));
-console.log(myValidAnagram('amanaplanacanalpanama', 'acanalmanplanpamana'));
-console.log(myValidAnagram('awertv', 'aevwrt'));
+// console.log(myValidAnagram('', ''));
+// console.log(myValidAnagram('aaz', 'zza'));
+// console.log(myValidAnagram('anagraam', 'nagaramm'));
+// console.log(myValidAnagram('rat', 'car'));
+// console.log(myValidAnagram('awesome', 'awesom'));
+// console.log(myValidAnagram('amanaplanacanalpanama', 'acanalmanplanpamana'));
+// console.log(myValidAnagram('awertv', 'aevwrt'));
